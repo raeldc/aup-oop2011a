@@ -2,7 +2,7 @@
 
 final class Config {
     
-    private $_config = array();
+    private $_config;
     
     public static function instance()
     {
