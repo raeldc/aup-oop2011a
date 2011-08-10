@@ -5,6 +5,11 @@ abstract class Models_Entities_Rows_Abstract {
     protected $_columns = array();
     protected $_data = array();
     
+    public function getData()
+    {
+        return $this->_data;
+    }
+    
     public function save()
     {
         return false;
@@ -18,5 +23,4 @@ abstract class Models_Entities_Rows_Abstract {
             $this->_data[$column] = $value;
         }
     }
-    
 }
