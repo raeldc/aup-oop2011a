@@ -10,6 +10,11 @@ abstract class Models_Entities_Rows_Abstract {
         return $this->_data;
     }
     
+    public function getColumns()
+    {
+        return $this->_columns;
+    }
+    
     public function save()
     {
         return false;
