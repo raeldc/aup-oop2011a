@@ -7,6 +7,7 @@ function auto_load($class)
 		// Transform the class name into a path
 		$file = str_replace('_', '/', strtolower($class));
         $path = realpath(dirname(__FILE__)).'/'.$file.'.php';
+
 		if (is_file($path))
 		{
 			// Load the class file

@@ -2,5 +2,8 @@
 
 require_once 'autoload.php';
 
-echo Config::instance()->database;
+$person = new Models_Entities_Rows_Person();
 
+$person->firstname = "Israel";
+$person->lastname = "Canasa";
+var_dump($person->getData());die();
