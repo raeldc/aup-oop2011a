@@ -5,9 +5,16 @@ abstract class Models_Entities_Rows_Abstract {
     protected $_columns = array();
     protected $_data = array();
     
+    //This converts the data into a standard object.
     public function getData()
     {
-        return $this->_data;
+        $data = new stdclass;
+        foreach($this->_data as $key => $value)
+        {
+            $data->$key = $value;
+        }
+        
+        return $data;
     }
     
     public function getColumns()
